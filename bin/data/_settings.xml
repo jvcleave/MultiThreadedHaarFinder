@@ -1,0 +1,26 @@
+<controls>
+    <SliderInt_threshold>
+        <name>threshold</name>
+        <value>60</value>
+    </SliderInt_threshold>
+    <SliderInt_blur>
+        <name>blur</name>
+        <value>0</value>
+    </SliderInt_blur>
+    <SliderInt_blob_minWidth>
+        <name>blob minWidth</name>
+        <value>20</value>
+    </SliderInt_blob_minWidth>
+    <SliderInt_blob_minHeight>
+        <name>blob minHeight</name>
+        <value>20</value>
+    </SliderInt_blob_minHeight>
+    <Toggle_doAlphaProcessing>
+        <name>doAlphaProcessing</name>
+        <value>0</value>
+    </Toggle_doAlphaProcessing>
+    <Toggle_doColorize>
+        <name>doColorize</name>
+        <value>1</value>
+    </Toggle_doColorize>
+</controls>
