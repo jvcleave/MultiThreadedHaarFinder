@@ -104,28 +104,32 @@ void ofxFBOTexture::allocate(int w, int h, int internalGlDataType, int numSample
 	texData.height = h;
 	this->numSamples = numSamples;
 	
-#ifndef TARGET_OPENGLES	
-    if (GLEE_ARB_texture_rectangle){
-        texData.tex_w = w;
-        texData.tex_h = h;
-        texData.textureTarget = GL_TEXTURE_RECTANGLE_ARB;
-    } else
-#endif	
-	{	
+/*
+ *GLEE_ARB_texture_rectangle thows errors in the latest from github (post 0062?) so i commented this out
+
+ */
+	//#ifndef TARGET_OPENGLES	
+//    if (GLEE_ARB_texture_rectangle){
+//        texData.tex_w = w;
+//        texData.tex_h = h;
+//        texData.textureTarget = GL_TEXTURE_RECTANGLE_ARB;
+//    } else
+//#endif	
+//	{	
         texData.tex_w = ofNextPow2(w);
         texData.tex_h = ofNextPow2(h);
-    }
+//    }
 	
-#ifndef TARGET_OPENGLES	
-	if (GLEE_ARB_texture_rectangle){
-		texData.tex_t = w;
-		texData.tex_u = h;
-	} else
-#endif	
-	{
+//#ifndef TARGET_OPENGLES	
+//	if (GLEE_ARB_texture_rectangle){
+//		texData.tex_t = w;
+//		texData.tex_u = h;
+//	} else
+//#endif	
+//	{
 		texData.tex_t = w/texData.tex_w;
 		texData.tex_u = h/texData.tex_h;
-	}
+	//}
 	
 	texData.width = w;
 	texData.height = h;
